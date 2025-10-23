@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Deep Blue Primary - Professional and trustworthy */
+    --primary: 217 91% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 35%;
+    
+    /* Teal Accent - Energy and innovation */
+    --secondary: 173 80% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 173 80% 35%;
+    
+    /* Amber Highlight - Attention and warmth */
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 11%;
+    
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 40%;
+    
+    --radius: 0.5rem;
+    
+    /* Sidebar tokens */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 217 91% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 40%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 40%) 0%, hsl(173 80% 40%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
+    /* Transitions */
+    --transition-base: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-colors: color, background-color, border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .btn-hero {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+  
+  .btn-secondary-hero {
+    @apply bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+  
+  .card-elevated {
+    @apply bg-card rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 border border-border;
+  }
+  
+  .card-interactive {
+    @apply card-elevated hover:scale-[1.02] hover:-translate-y-1 transition-all duration-200 cursor-pointer;
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .input-focus {
+    @apply focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200;
+  }
+}
