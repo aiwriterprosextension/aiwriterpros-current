@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -5,8 +6,15 @@ const DisclaimerPage = () => {
   const lastUpdated = "January 1, 2024";
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>Disclaimer - AIWriterPros</title>
+        <meta name="description" content="Read AIWriterPros' disclaimer to understand the limitations and responsibilities regarding AI-generated content and our services." />
+        <link rel="canonical" href="https://aiwriterpros.lovable.app/disclaimer" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+      <div className="min-h-screen">
+        <Header />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto">
@@ -126,8 +134,9 @@ const DisclaimerPage = () => {
         </div>
       </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

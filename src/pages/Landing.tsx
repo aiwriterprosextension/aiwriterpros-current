@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, TrendingUp, Target, Zap, FileText, BarChart, Code, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -10,8 +11,25 @@ const Landing = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>AIWriterPros | AI-Powered SEO Content Generator - Rank #1 on Google</title>
+        <meta 
+          name="description" 
+          content="Create comprehensive, SEO-optimized Amazon reviews, buying guides, and comparison articles that rank on Google. AI-powered content generation built by SEO experts. Start free." 
+        />
+        <link rel="canonical" href="https://aiwriterpros.lovable.app/" />
+        <meta property="og:title" content="AIWriterPros | AI-Powered SEO Content Generator" />
+        <meta property="og:description" content="Create comprehensive, SEO-optimized Amazon reviews, buying guides, and comparison articles that rank on Google." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://aiwriterpros.lovable.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AIWriterPros | AI-Powered SEO Content Generator" />
+        <meta name="twitter:description" content="Create comprehensive, SEO-optimized Amazon reviews, buying guides, and comparison articles that rank on Google." />
+      </Helmet>
+
+      <div className="min-h-screen">
+        <Header />
 
       {/* Hero Section */}
       <section className="gradient-hero text-white py-20 md:py-32">
@@ -353,8 +371,9 @@ const Landing = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

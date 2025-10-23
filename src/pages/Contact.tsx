@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,8 +20,21 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>Contact Us - AIWriterPros | Get Support & Ask Questions</title>
+        <meta 
+          name="description" 
+          content="Have questions about AIWriterPros? Contact our support team. We typically respond within 24 hours. Email: support@aiwriterpros.com" 
+        />
+        <link rel="canonical" href="https://aiwriterpros.lovable.app/contact" />
+        <meta property="og:title" content="Contact Us - AIWriterPros" />
+        <meta property="og:description" content="Have questions about AIWriterPros? Contact our support team." />
+        <meta property="og:url" content="https://aiwriterpros.lovable.app/contact" />
+      </Helmet>
+
+      <div className="min-h-screen">
+        <Header />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center mb-16">
@@ -117,8 +131,9 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

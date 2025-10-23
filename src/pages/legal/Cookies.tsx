@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -5,8 +6,15 @@ const CookiesPage = () => {
   const lastUpdated = "January 1, 2024";
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>Cookie Policy - AIWriterPros</title>
+        <meta name="description" content="Learn about how AIWriterPros uses cookies and similar technologies to enhance your experience on our platform." />
+        <link rel="canonical" href="https://aiwriterpros.lovable.app/cookies" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+      <div className="min-h-screen">
+        <Header />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto">
@@ -108,8 +116,9 @@ const CookiesPage = () => {
         </div>
       </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

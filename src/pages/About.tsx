@@ -1,11 +1,25 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Target, Users, Zap, Award } from "lucide-react";
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>About AIWriterPros | AI-Powered SEO Content Platform</title>
+        <meta 
+          name="description" 
+          content="Learn about AIWriterPros - the AI content platform built by SEO experts. Our mission is to democratize SEO content creation through powerful AI tools." 
+        />
+        <link rel="canonical" href="https://aiwriterpros.lovable.app/about" />
+        <meta property="og:title" content="About AIWriterPros" />
+        <meta property="og:description" content="Learn about AIWriterPros - the AI content platform built by SEO experts." />
+        <meta property="og:url" content="https://aiwriterpros.lovable.app/about" />
+      </Helmet>
+
+      <div className="min-h-screen">
+        <Header />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero */}
@@ -96,8 +110,9 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { CheckCircle, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -90,8 +91,21 @@ const PricingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <Helmet>
+        <title>Pricing - AIWriterPros | Simple & Transparent Pricing Plans</title>
+        <meta 
+          name="description" 
+          content="Choose the perfect AIWriterPros plan. Free: 5 articles/month. Pro: 50 articles/month at $49. Business: Unlimited articles at $149. All plans include SEO optimization." 
+        />
+        <link rel="canonical" href="https://aiwriterpros.lovable.app/pricing" />
+        <meta property="og:title" content="Pricing - AIWriterPros" />
+        <meta property="og:description" content="Choose the perfect AIWriterPros plan. Free: 5 articles/month. Pro: 50 articles/month. Business: Unlimited articles." />
+        <meta property="og:url" content="https://aiwriterpros.lovable.app/pricing" />
+      </Helmet>
+
+      <div className="min-h-screen">
+        <Header />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center mb-16">
@@ -203,8 +217,9 @@ const PricingPage = () => {
         </div>
       </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
