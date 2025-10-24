@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { TrendingUp, FileText, DollarSign, BarChart3, Loader2 } from "lucide-react";
 import DashboardSidebar from "@/components/DashboardSidebar";
 import { PieChart, Pie, Cell, LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
