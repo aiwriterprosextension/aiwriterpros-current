@@ -8,11 +8,11 @@ const Header = () => {
   const [featuresOpen, setFeaturesOpen] = useState(false);
 
   const articleTypes = [
-    { name: "Amazon Product Reviews", path: "/amazon-reviews", available: true },
-    { name: "Product Comparisons", path: "/product-comparisons", available: false },
-    { name: "Buying Guides", path: "/buying-guides", available: false },
-    { name: "How-To Articles", path: "/how-to-articles", available: false },
-    { name: "Product Roundups", path: "/product-roundups", available: false },
+    { name: "Amazon Product Reviews", path: "/amazon-product-review-generator", available: true },
+    { name: "Product Comparisons", path: "/product-comparison-generator", available: true },
+    { name: "Buying Guides", path: "/buying-guide-generator", available: true },
+    { name: "How-To Articles", path: "/how-to-article-generator", available: true },
+    { name: "Product Roundups", path: "/product-roundup-generator", available: true },
   ];
 
   return (

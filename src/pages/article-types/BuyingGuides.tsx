@@ -81,7 +81,7 @@ const BuyingGuidesPage = () => {
                   </Button>
                 </Link>
                 <Link to="/pricing">
-                  <Button size="lg" variant="outline" className="btn-secondary-hero">
+                  <Button size="lg" className="btn-secondary-hero">
                     View Pricing
                   </Button>
                 </Link>
@@ -224,7 +224,7 @@ const BuyingGuidesPage = () => {
                   </Button>
                 </Link>
                 <Link to="/pricing">
-                  <Button size="lg" variant="outline" className="btn-secondary-hero">
+                  <Button size="lg" className="btn-secondary-hero">
                     View Pricing Plans
                   </Button>
                 </Link>
