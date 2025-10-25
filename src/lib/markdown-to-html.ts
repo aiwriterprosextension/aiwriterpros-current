@@ -1,6 +1,21 @@
 import { marked } from 'marked';
 
 /**
+ * Converts markdown content to HTML synchronously (for inline use)
+ * @param markdown - The markdown content to convert
+ * @returns HTML string
+ */
+export function markdownToHtml(markdown: string): string {
+  // Convert markdown to HTML with basic options
+  const html = marked.parse(markdown, {
+    gfm: true, // GitHub Flavored Markdown
+    breaks: true, // Convert \n to <br>
+  }) as string;
+  
+  return html;
+}
+
+/**
  * Converts markdown content to clean, SEO-optimized HTML
  * @param markdown - The markdown content to convert
  * @returns HTML string

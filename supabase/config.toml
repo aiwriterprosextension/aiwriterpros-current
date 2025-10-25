@@ -1,1 +1,10 @@
 project_id = "watgetvpsnnxbugjvhvj"
+
+[functions.generate-seo-metadata]
+verify_jwt = true
+
+[functions.scrape-amazon-product]
+verify_jwt = true
+
+[functions.optimize-images]
+verify_jwt = true
