@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle, Star, TrendingUp, Target, Zap, FileText, BarCh
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { SocialProofNotification } from "@/components/SocialProofNotification";
 
 const Landing = () => {
   const scrollToFeatures = () => {
@@ -29,6 +31,8 @@ const Landing = () => {
       </Helmet>
 
       <div className="min-h-screen">
+        <ExitIntentPopup />
+        <SocialProofNotification />
         <Header />
 
       {/* Hero Section */}

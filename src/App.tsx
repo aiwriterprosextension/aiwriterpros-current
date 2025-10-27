@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import MyArticles from "./pages/MyArticles";
 import Analytics from "./pages/Analytics";
 import SettingsPage from "./pages/Settings";
+import ContentLibrary from "./pages/ContentLibrary";
 import AmazonReviewGenerator from "./pages/AmazonReviewGenerator";
 import BuyingGuideGenerator from "./pages/BuyingGuideGenerator";
 import ProductRoundupGenerator from "./pages/ProductRoundupGenerator";
@@ -46,6 +47,7 @@ const App = () => (
             <Route path="/dashboard/articles" element={<ProtectedRoute><MyArticles /></ProtectedRoute>} />
             <Route path="/dashboard/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
             <Route path="/dashboard/settings" element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
+            <Route path="/dashboard/content-library" element={<ProtectedRoute><ContentLibrary /></ProtectedRoute>} />
             <Route path="/dashboard/create/amazon-review" element={<ProtectedRoute><AmazonReviewGenerator /></ProtectedRoute>} />
             <Route path="/dashboard/create/buying-guide" element={<ProtectedRoute><BuyingGuideGenerator /></ProtectedRoute>} />
             <Route path="/dashboard/create/product-roundup" element={<ProtectedRoute><ProductRoundupGenerator /></ProtectedRoute>} />
